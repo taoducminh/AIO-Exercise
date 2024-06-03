@@ -1,4 +1,4 @@
-'''
+
 # Viết function thực hiện đánh giá classification model bằng F1-Score.
 def evaluate_classification_model(tp, fp, fn):
     # Kiểm tra kiểu dữ liệu của tp, fp, fn
@@ -54,7 +54,7 @@ def sigmoid(x):
 def relu(x):
     return max(0, x)
 
-def elu(x):
+def elu(x, alpha = 0.01):
     return x if x > 0 else alpha * (math.exp(x) - 1)
 
 def activation_function(x, function_name):
@@ -406,7 +406,7 @@ assert round(approx_sinh(x=1, n=10), 2) == 1.18
 
 # Expected output: 11.53 for sinh(3.14) with 10 iterations
 print(round(approx_sinh(x=3.14, n=10), 2))
-'''
+
 
 # Câu hỏi 12 : Dựa vào công thức xấp xỉ cosh và điều kiện được giới thiệu. Viết function xấp xỉ cosh khi nhận x là giá trị muốn tính cosh(x) và n là số lần lặp muốn xấp xỉ. Return về kết quả cosh(x) với bậc xấp xỉ tương ứng. Đầu ra của chương trình sau đây là gì?
 import math
